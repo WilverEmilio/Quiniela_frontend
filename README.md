@@ -60,14 +60,14 @@ Define las rutas del sitio:
 - / → Página principal
 - /quinielas
 - /quiniela/[id]
-- /login, /register (futuro)
+- /login, /register (futuro) \
 🔹 components/
 Componentes reutilizables como:
 - Cards de partidos
 - Formularios
 - Tablas de posiciones
 - Botones
-- Modales
+- Modales \
 🔹 layouts/
 Layouts base para mantener una estructura consistente:
 - Header
@@ -111,10 +111,10 @@ http://localhost:4321
 ````
 
 ## 📌 Estado del proyecto
-🚧 En desarrollo
-📈 Arquitectura preparada para escalar
-🔌 Integración con backend FastAPI
+🚧 En desarrollo \
+📈 Arquitectura preparada para escalar \
+🔌 Integración con backend FastAPI \
 
 ## ✍️ Autor
-Proyecto personal desarrollado por **Wilver Ixcot**
+Proyecto personal desarrollado por **Wilver Ixcot** \
 Enfocado en mejorar habilidades de arquitectura, backend y frontend moderno.
