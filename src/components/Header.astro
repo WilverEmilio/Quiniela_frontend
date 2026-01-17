@@ -1,0 +1,168 @@
+---
+---
+<style>
+  .header {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+  }
+
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .logo-link:hover {
+    transform: scale(1.05);
+  }
+
+  .logo {
+    height: 55px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .auth {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .btn-login {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-login:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: white;
+  }
+
+  .btn-register {
+    color: #667eea;
+    background: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    background: #f8f9ff;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header-container {
+      padding: 0 1rem;
+    }
+
+    .nav {
+      gap: 1rem;
+    }
+
+    .nav-link {
+      font-size: 0.9rem;
+    }
+
+    .auth {
+      gap: 0.5rem;
+    }
+
+    .btn-login,
+    .btn-register {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav {
+      display: none;
+    }
+
+    .logo {
+      height: 45px;
+    }
+  }
+</style>
+
+
+<header class="header">
+  <div class="header-container">
+    <a href="/" class="logo-link">
+      <img class="logo" src="/images/quiniela.png" alt="Logo Quiniela" />
+    </a>
+
+    <nav class="nav">
+      <a href="/" class="nav-link">Inicio</a>
+      <a href="/jugar" class="nav-link">Jugar</a>
+      <a href="/resultados" class="nav-link">Resultados</a>
+    </nav>
+
+    <div class="auth">
+      <a href="/login" class="btn-login">Iniciar sesión</a>
+      <a href="/register" class="btn-register">Registrarse</a>
+    </div>
+  </div>
+</header>
+
